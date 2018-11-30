@@ -1,0 +1,79 @@
+.slide .image {
+    box-shadow: none;
+    margin: 0;
+    border: none;
+    background: none;
+}
+
+.slide .shaded-text {
+    color: rgb(158, 158, 158);
+}
+
+.slide .marked-text {
+    color: rgb(255, 102, 0);
+}
+
+.slide .smaller-text {
+    font-size: 0.8em;
+}
+
+.slide .thick-text {
+    font-weight: 700;
+}
+
+.slide .slide-heading {
+    text-transform: none;
+}
+
+.slide .logo {
+    color: rgb(255, 102, 0);
+}
+
+.slide .image.image-in-center {
+    vertical-align: middle;
+    position: relative;
+    bottom: 0.1em;
+}
+
+.slide .logo .logo-part {
+    color: rgb(158, 158, 158);
+}
+
+.slide .speaker {
+    font-size: 0.6em;
+    color: rgb(158, 158, 158);
+}
+
+.slide.question .slide-heading {
+    color: white;
+    font-size: 2em;
+}
+
+.slide blockquote {
+    color: rgb(255, 102, 0);
+}
+
+.slide .fragment-with-year  {
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 2em;
+}
+
+.slide .fragment-with-year .year {
+    display: inline-block;
+    text-align: center;
+}
+
+.slide .image-description {
+    padding-left: 1.7em;   
+}
+
+.slide .fragment-with-arrow  {
+    text-align: left;
+    margin-left: 2.6em;
+}
+
+.slide table td {
+    padding: 2em;
+    text-align: center;
+}

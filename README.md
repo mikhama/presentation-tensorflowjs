@@ -214,6 +214,8 @@ TensorFlow.js provides two major ways to manage memory:
 
 It is an example from the official site of <a href="https://js.tensorflow.org/">TensorFlow.js</a>.
 
+For example, we have linear regression. And we need to predict Y when X = 5.
+
 ```
 // Define a model for linear regression.
 const model = tf.sequential();
@@ -232,16 +234,6 @@ model.fit(xs, ys, {epochs: 1000}).then(() => {
 model.predict(tf.tensor2d([5], [1, 1])).print();
 });
 ```
-
-For example, we have linear regression. And we need to predict Y when X = 5.
-
-Steps:
-1. Define a model.
-2. Prepare the model for training: Specify the loss and the optimizer.
-3. Generate some synthetic data for training.
-4. Train the model using the data.
-5. Use the model to do inference on a data point the model hasn't seen before.
-
 With each new iteration, a probability of prediction is increasing, because the model is training. `epochs` is a number of iterations.
 
 ```

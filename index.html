@@ -62,9 +62,10 @@
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Languages Support</h2>
-						<p class="fragment">
-							<img class="image image-in-center" src="./images/logo.png" alt="Logo" width="120" height="120">
-							<span class="image-description thick-text marked-text">Low-level C++ library</span>
+						<p class="fragment marked-text">
+							This is a low-level C++ library
+							<!-- <img class="image image-in-center" src="./images/logo.png" alt="Logo" width="120" height="120"> -->
+							<!-- <span class="image-description thick-text marked-text">Low-level C++ library</span> -->
 						</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">Python</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">Java</p>
@@ -105,18 +106,15 @@
 						<img class="image" src="./images/client-server-architecture.png" alt="Logo">
 					</section>
 					<section class="slide">
-						<h2 class="slide-heading">Deeplearn.js</h2>
-						<p class="marked-text thick-text">August 2017</p>
-						<ul class="shaded-text">
-							<li>Machine Learning in JavaScript!</li>
-							<li>API hassle free</li>
-						</ul>
-					</section>
-					<section class="slide">
-						<h2 class="slide-heading">Deeplearn.js</h2>
-						<p class="fragment fade-in-then-semi-out">⬇</p>
-						<p class="fragment fade-in-then-semi-out marked-text thick-text">Low speed of computing</p>
-						<p class="fragment fade-in-then-semi-out">⬇</p>
+						<p class="marked-text thick-text smaller-text">August 2017</p>
+						<p class="fragment fade-in-then-semi-out smaller-text no-margin">⬇</p>
+						<h2 class="fragment fade-in-then-semi-out slide-heading">Deeplearn.js</h2>
+						<p class="fragment fade-in-then-semi-out smaller-text no-margin">⬇</p>
+						<p class="fragment fade-in-then-semi-out smaller-text">Machine Learning in JavaScript...</p>
+						<p class="fragment fade-in-then-semi-out smaller-text">...without API hassle!</p>
+						<p class="fragment fade-in-then-semi-out smaller-text no-margin">⬇</p>
+						<p class="fragment fade-in-then-semi-out marked-text thick-text smaller-text">Low speed of computing</p>
+						<p class="fragment fade-in-then-semi-out smaller-text no-margin">⬇</p>
 						<p class="fragment fade-in-then-semi-out grow">WebGL</p>
 					</section>
 					<section class="slide">
@@ -139,8 +137,202 @@
 				</section>
 				<section>
 					<section class="slide question" data-background="rgb(255, 102, 0)">
-						<h2 class="slide-heading">What is providing TensorFlow.js for Front-end Developers?</h2>
+						<h2 class="slide-heading">What is TensorFlow.js providing for Front-end Developers?</h2>
 					</section>
+					<section class="slide">
+						<h2 class="slide-heading">It entirety works in a browser:</h2>
+						<ul>
+							<li>It doesn't need drivers or installations.</li>
+							<li>It is Highly interactive, because of JavaScript!</li>
+						</ul>
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/phone-sensors.png" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">With TensorFlow.js you can:</h2>
+						<ul>
+							<li>Build and train models from scratch.</li>
+							<li>Run existing models right in the browser.</li>
+							<li>Retrain existing models.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section class="slide question" data-background="rgb(255, 102, 0)">
+						<h2 class="slide-heading">For what kind of applications I might use TensorFlow.js?</h2>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading"><a href="https://js.tensorflow.org/">Demo applications:</a></h2>
+						<ul>
+							<li>Emoji Scavenger Hunt</li>
+							<li>Webcam Controller</li>
+							<li>Teachable Machine</li>
+							<li>Perfomarmance RNN</li>
+							<li>Posenet</li>
+						</ul>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Let's play in PACMAN!</h2>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading marked-text">1. Setup Controller</h2>
+					</section>
+					<section class="slide" data-background="black" data-background-image="images/pacman-setup.gif" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading marked-text">2. Playing</h2>
+					</section>
+					<section class="slide" data-background="black" data-background-image="images/pacman-playing.gif" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">You might use TensorFlow.js for:</h2>
+						<ul>
+							<li>Accessibility</li>
+							<li>Games</li>
+							<li>Learning applications</li>
+							<li>...and so on</li>
+						</ul>		
+					</section>
+				</section>
+				<section>
+					<section class="slide question" data-background="rgb(255, 102, 0)">
+						<h2 class="slide-heading">How get started?</h2>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">In Browser:</h2>
+						<pre><code data-trim data-noescape>
+							&lt;script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"&gt;
+							&lt;/script&gt;
+						</code></pre>
+						<h2 class="slide-heading">In Node.js:</h2>
+						<pre><code data-trim data-noescape>
+							$ npm install @tensorflow/tfjs
+						</code></pre>
+						<pre><code data-trim data-noescape>
+							import * as tf from '@tensorflow/tfjs';
+						</code></pre>
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/runtime.png" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Tensors</h2>
+						<table class="table-with-images">
+							<tr>
+								<td class="fragment"><img class="image" src="./images/scalar.png" alt="Scalar" height="200"></td>
+								<td class="fragment"><img class="image" src="./images/vector.png" alt="Vector" height="200"></td>
+								<td class="fragment"><img class="image" src="./images/matrix.png" alt="Matrix" height="200"></td>
+								<td class="fragment"><img class="image" src="./images/tensor.png" alt="Tensor" height="200"></td>
+							</tr>
+						</table>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Creating a tensor</h2>
+						<p><span class="marked-text">tf.tensor</span><span class="shaded-text">(values, shape?, dtype?)</span></p>
+						<pre><code data-trim data-noescape>
+							values (TypedArray|Array)
+							shape (number[])
+							dtype ('float32'|'int32'|'bool'|'complex64')
+						</code></pre>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Variables</h2>
+						<p><span class="marked-text">tf.variable</span><span class="shaded-text">()</span></p>
+						<pre><code data-trim data-noescape>
+							const x = tf.variable(tf.tensor([1, 2, 3]));
+							x.assign(tf.tensor([4, 5, 6]));
+							
+							x.print();
+						</code></pre>	
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Operations</h2>
+						<p><span class="marked-text">tf.add</span><span class="shaded-text">()</span></p>
+						<pre><code data-trim data-noescape>
+							const a = tf.tensor1d([1, 2, 3, 4]);
+							const b = tf.tensor1d([10, 20, 30, 40]);
+							
+							a.add(b).print();  // or tf.add(a, b)
+							// [11, 22, 33, 44]
+						</code></pre>
+						<p><span class="marked-text">tf.matmul</span><span class="shaded-text">()</span></p>
+						<pre><code data-trim data-noescape>
+							const a = tf.tensor2d([1, 2], [1, 2]);
+							const b = tf.tensor2d([1, 2, 3, 4], [2, 2]);
+							
+							a.matMul(b).print();  // or tf.matMul(a, b)
+						</code></pre>
+						<p>More operations on the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page</a></p>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Memory Management</h2>
+						<ol>
+							<li><span class="marked-text">tf.dispose</span><span class="shaded-text">()</span> — Disposes any <span class="marked-text">tf.Tensors</span> found within the provided object.</li>
+							<li><span class="marked-text">tf.tidy</span><span class="shaded-text">()</span> — Using this method helps avoid memory leaks.</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section class="slide question" data-background="rgb(255, 102, 0)">
+						<h2 class="slide-heading">Hello, TensorFlow.js!</h2>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Creating from scratch and training simple model</h2>
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/graph-1.png" data-background-size="contain">
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/graph-2.png" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Code example</h2>
+						<pre><code class="smaller-code" data-trim data-noescape>
+							1	// 1. Define a model for linear regression
+							2	const model = tf.sequential();
+							3	model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+							4	
+							5	// 2. Prepare the model for training
+							6	model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
+							7
+							8	// 3. Generate some synthetic data for training
+							9	const xs = tf.tensor2d([1, 2, 3, 4], [4, 1]);
+							10	const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
+							11
+							12	// 4. Train the model using the data
+							13	model.fit(xs, ys, {epochs: 10}).then(() =&gt; {
+							14	  // 5. Use the model
+							15	  model.predict(tf.tensor2d([5], [1, 1])).print();
+							16	});
+						</code></pre>
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/graph-3.png" data-background-size="contain">
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/graph-4.png" data-background-size="contain">
+					</section>
+					<section class="slide" data-background="white" data-background-image="images/graph-5.png" data-background-size="contain">
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Using pre-trained model</h2>
+						<p><a href="https://mikhama.github.io/image-recognition/" target="_blank">Image Recognition</a> with TensorFlow.js</p>
+					</section>
+					<section class="slide">
+						<h2 class="slide-heading">Code example</h2>
+						<pre><code data-trim data-noescape>
+							 8	const model = await tf.loadModel('./model/model.json');
+								...
+							43	const offset = tf.scalar(127.5);
+							44	const tensor = tf.fromPixels(selectedImage)
+							45	  .resizeNearestNeighbor([224, 224])
+							46	  .toFloat()
+							47	  .sub(offset)
+							48	  .div(offset)
+							49	  .expandDims();
+							50
+							51	const prediction = await model.predict(tensor).data();
+						</code></pre>
+						<p>See the whole code on my <a href="https://github.com/mikhama/image-recognition" target="_blank">GitHub page</a></p>
+					</section>
+				</section>
+				<section class="slide question" data-background="rgb(255, 102, 0)">
+					<h2 class="slide-heading">Thank you!</h2>
 				</section>
 			</div>
 		</div>

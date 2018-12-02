@@ -1,79 +1,98 @@
 .slide .image {
-    box-shadow: none;
-    margin: 0;
-    border: none;
-    background: none;
+  margin: 0;
+
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 .slide .shaded-text {
-    color: rgb(158, 158, 158);
+  color: rgb(158, 158, 158);
 }
 
 .slide .marked-text {
-    color: rgb(255, 102, 0);
+  color: rgb(255, 102, 0);
 }
 
 .slide .smaller-text {
-    font-size: 0.8em;
+  font-size: 0.8em;
+}
+
+.slide .smaller-code {
+  font-size: 0.7em;
+  line-height: 1.5em;
 }
 
 .slide .thick-text {
-    font-weight: 700;
+  font-weight: 700;
+}
+
+.slide .no-margin {
+  margin: 0;
 }
 
 .slide .slide-heading {
-    text-transform: none;
+  text-transform: none;
 }
 
 .slide .logo {
-    color: rgb(255, 102, 0);
+  color: rgb(255, 102, 0);
 }
 
 .slide .image.image-in-center {
-    vertical-align: middle;
-    position: relative;
-    bottom: 0.1em;
+  position: relative;
+  bottom: 0.1em;
+
+  vertical-align: middle;
 }
 
 .slide .logo .logo-part {
-    color: rgb(158, 158, 158);
+  color: rgb(158, 158, 158);
 }
 
 .slide .speaker {
-    font-size: 0.6em;
-    color: rgb(158, 158, 158);
+  font-size: 0.6em;
+  color: rgb(158, 158, 158);
 }
 
 .slide.question .slide-heading {
-    color: white;
-    font-size: 2em;
+  font-size: 2em;
+  color: white;
 }
 
 .slide blockquote {
-    color: rgb(255, 102, 0);
+  color: rgb(255, 102, 0);
 }
 
-.slide .fragment-with-year  {
-    vertical-align: middle;
-    text-align: left;
-    margin-left: 2em;
+.slide .fragment-with-year {
+  margin-left: 2em;
+
+  vertical-align: middle;
+  text-align: left;
 }
 
 .slide .fragment-with-year .year {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+
+  text-align: center;
 }
 
 .slide .image-description {
-    padding-left: 1.7em;   
+  padding-left: 1.7em;
 }
 
-.slide .fragment-with-arrow  {
-    text-align: left;
-    margin-left: 2.6em;
+.slide .fragment-with-arrow {
+  margin-left: 2.6em;
+
+  text-align: left;
 }
 
 .slide table td {
-    padding: 2em;
-    text-align: center;
+  padding: 2em;
+
+  text-align: center;
+}
+
+.slide .table-with-images td {
+  padding: 0;
 }

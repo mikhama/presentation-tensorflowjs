@@ -4,40 +4,40 @@
 
 ## Agenda
 
-- [Introduction](#intro)
-- [What is TensorFlow?](#link1)
+- [Introduction](#-introduction)
+- [What is TensorFlow?](#-what-is-tensorflow)
     - History timeline.
     - Languages support.
     - Platforms support.
-- [And what about TensorFlow.js?](#link2)
+- [And what about TensorFlow.js?](#-and-what-about-tensorflowjs)
     - Client-Server Architecture.
     - August 2017 - Deeplearn.js - Problem with speed - WebGL.
     - March 2018 - TensorFlow.js.
-- [Who is using it?](#link3)
-- [What is TensorFlow.js providing for Front-end Developers?](#link4)
+- [Who is using it?](#-who-is-using-it)
+- [What is TensorFlow.js providing for Front-end Developers?](#-what-is-tensorflowjs-providing-for-front-end-developers)
     - Working in a browser.
     - Working at mobile devices.
     - Creating new models.
     - Running existing models.
     - Retrain existing models. 
-- [For what kind of applications I might use TensorFlow.js?](#link5)
+- [For what kind of applications I might use TensorFlow.js?](#-for-what-kind-of-applications-i-might-use-tensorflowjs)
     - Demo applications. 
     - Pacman. Training model.
     - Pacman. Playing!
     - Ideas about usage.
-- [How get started?](#link6)
-    - [Importing library in a project.](#link6)
-    - [TensorFlow.js runtime.](#link7)
-    - [Tensors.](#link8)
-    - [Variables.](#link9)
-    - [Operations.](#link10)
-    - [Memory management.](#link11)
-- [Hello, TensorFlow.js!](#link12)
-    - [Creating from scratch and training simple model.](#link13)
-    - [Using pre-trained model.](#link14)
-- [Сonclusion](#link15)
+- [How get started?](#-how-get-started)
+    - [Importing library in a project.](#-how-get-started)
+    - [TensorFlow.js runtime.](#-tensorflowjs-runtime)
+    - [Tensors.](#-tensors)
+    - [Variables.](#-variables)
+    - [Operations.](#-operations)
+    - [Memory management.](#-memory-management)
+- [Hello, TensorFlow.js!](#-hello-tensorflowjs)
+    - [Creating from scratch and training simple model.](#-creating-from-scratch-and-training-simple-model)
+    - [Using pre-trained model.](#-use-pre-trained-model)
+- [Сonclusion](#-conclusion)
 
-## <a name="#intro"></a> Introduction
+## Introduction
 
 Hello everyone. My name is Dzmitry. I'll tell you about TensorFlow.js.
 
@@ -45,7 +45,7 @@ Recently getting started with machine learning was very expensive and time-consu
 
 Before going to TensorFlow.js, I would like to start off with TensorFlow.
 
-## <a name="#link1"></a> What is TensorFlow?
+## What is TensorFlow?
 
 An <a href="https://www.tensorflow.org">official site</a> of Tensor Flow  says: "This is an open source machine learning framework for everyone."
 
@@ -59,7 +59,7 @@ It is a low-level C++ library with a lot of functionality for doing Machine Lear
 
 It can run on multiple CPUs and GPUs and is available on 64-bit Linux, macOS, Windows, and mobile computing platforms including Android and iOS.
 
-## <a name="#link2"></a> And what about TensorFlow.js?
+## And what about TensorFlow.js?
 
 In JavaScript, Machine Learning was performed by using an API. An API was made using some framework, and the model was deployed at the server. The client sent a request using JavaScript to get results from the server.
 
@@ -69,11 +69,11 @@ But there were questions about speed. It was very well known that JavaScript cod
 
 And in March 2018, the DeepLearn.js team got merged into the TensorFlow Team at Google and was renamed to TensorFlow.js.
 
-## <a name="#link3"></a> Who is using it?
+## Who is using it?
 
 Tensor Flow has been using by many companies such as Google, Airbnb, Intel, AMD, UBER, and many others.
 
-## <a name="#link4"></a> What is TensorFlow.js providing for Front-end Developers?
+## What is TensorFlow.js providing for Front-end Developers?
 
 It entirety works in a browser:
 - It doesn't need drivers or installations.
@@ -86,7 +86,7 @@ With TesnsorFlow.js you can:
 - Use TensorFlow.js model converters to run existing models (Keras) right in the browser or under Node.js.
 - Retrain existing models using sensor data connected to the browser, or other client-side data.
 
-## <a name="#link5"></a> For what kind of applications I might use TensorFlow.js?
+## For what kind of applications I might use TensorFlow.js?
 
 Official site of <a href="https://js.tensorflow.org/">TensorFlow.js</a> provides some demo applications available:
 
@@ -114,7 +114,7 @@ I think you might use TensorFlow.js for:
 - Learning applications (Maybe for dancing learning application).
 - and so on.
 
-## <a name="#link6"></a> How get started?
+## How get started?
 
 You can only add this line to your HTML-file:
 
@@ -128,7 +128,7 @@ And write it in your main js file:
 
 `import * as tf from '@tensorflow/tfjs';`
 
-### <a name="#link7"></a> TensorFlow.js runtime
+### TensorFlow.js runtime
 
 TensorFlow.js uses WebGL. And it provides two things:
 - CoreAPI is a low-level API for linear algebra and automatic differentiation. It contains tools for creating and training models from scratch.
@@ -136,7 +136,7 @@ TensorFlow.js uses WebGL. And it provides two things:
 
 TensorFlow supports models importing (TensorFlow and Keras).
 
-### <a name="#link8"></a> Tensors
+### Tensors
 
 So, what is a Tensor?
 
@@ -161,7 +161,7 @@ For creating a tensor you should use this method `tf.tensor(values, shape?, dtyp
 - **shape** *(number[])* The shape of the tensor. Optional. If not provided, it is inferred from values. Optional.
 - **dtype** *('float32'|'int32'|'bool'|'complex64')* The data type. Optional.
 
-### <a name="#link9"></a> Variables
+### Variables
 
 Tensors are immutable data structures. This means their values can't be changed once they are set.
 
@@ -174,7 +174,7 @@ x.assign(tf.tensor([4, 5, 6]));
 x.print();
 ```
 
-### <a name="#link10"></a> Operations
+### Operations
 
 There are many operations in TensorFlow.js you can find on the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page</a>. Operations always return new Tensors and newer modify input Tensors. But `tf.variable()` can be used in order to save memory.
 
@@ -197,7 +197,7 @@ const b = tf.tensor2d([1, 2, 3, 4], [2, 2]);
 a.matMul(b).print();  // or tf.matMul(a, b)
 ```
 
-### <a name="#link11"></a> Memory Management
+### Memory Management
 
 Memory management is the key in the Machine Learning tasks because they are generally computationally expensive.
 
@@ -206,9 +206,9 @@ TensorFlow.js provides two major ways to manage memory:
 1. `tf.dispose()` - Disposes any `tf.Tensors` found within the provided object.
 2. `tf.tidy()` - Using this method helps avoid memory leaks.
 
-## <a name="#link12"></a> Hello, TensorFlow.js!
+## Hello, TensorFlow.js!
 
-### <a name="#link13"></a> Creating from scratch and training simple model
+### Creating from scratch and training simple model
 
 It is an example from the official site of <a href="https://js.tensorflow.org/">TensorFlow.js</a>.
 
@@ -248,7 +248,7 @@ epochs = 100 shows 8.130826
 epochs = 1000 shows 8.9420271
 ```
 
-### <a name="#link14"></a> Use pre-trained model.
+### Use pre-trained model.
 
 I have created an application for <a href="https://mikhama.github.io/image-recognition/">image recognition</a> in order to show you that TensorFlow.js is not very hard to use on real life Web-Applications.
 
@@ -284,7 +284,7 @@ And then I do some magic with TensorFlow.js.
 
 For good prediction recommended doing pre-processing of images. We need it because images that are used for creating model and images that are used right now are different. They hue/saturation, color and brightness may be different. We have to normalize the image by using a different technics in order to make that particular real-world image into the same type of image what we have trained. That normalizing have been made from 45 to 49 lines.
 
-## <a name="#link15"></a> Conclusion
+## Conclusion
 
 As a conclusion I would like to say that TensorFlow.js is very young, however, it is robust and useful JavaScript-framework.
 Thank you!

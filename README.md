@@ -4,7 +4,7 @@
 
 ## Agenda
 
-Introduction
+- Introduction
 - What is TensorFlow?
     - History timeline.
     - Languages support.
@@ -35,7 +35,7 @@ Introduction
 - Hello, TensorFlow.js!
     - Creating from scratch and training simple model.
     - Using pre-trained model.
-Сonclusion
+- Сonclusion
 
 ## Introduction
 

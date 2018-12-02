@@ -4,38 +4,38 @@
 
 ## Agenda
 
-- [Introduction](#-introduction)
-- [What is TensorFlow?](#-what-is-tensorflow)
+- [Introduction](#introduction)
+- [What is TensorFlow?](#what-is-tensorflow)
     - History timeline.
     - Languages support.
     - Platforms support.
-- [And what about TensorFlow.js?](#-and-what-about-tensorflowjs)
+- [And what about TensorFlow.js?](#and-what-about-tensorflowjs)
     - Client-Server Architecture.
     - August 2017 - Deeplearn.js - Problem with speed - WebGL.
     - March 2018 - TensorFlow.js.
-- [Who is using it?](#-who-is-using-it)
-- [What is TensorFlow.js providing for Front-end Developers?](#-what-is-tensorflowjs-providing-for-front-end-developers)
+- [Who is using it?](#who-is-using-it)
+- [What is TensorFlow.js providing for Front-end Developers?](#what-is-tensorflowjs-providing-for-front-end-developers)
     - Working in a browser.
     - Working at mobile devices.
     - Creating new models.
     - Running existing models.
     - Retrain existing models. 
-- [For what kind of applications I might use TensorFlow.js?](#-for-what-kind-of-applications-i-might-use-tensorflowjs)
+- [For what kind of applications I might use TensorFlow.js?](#for-what-kind-of-applications-i-might-use-tensorflowjs)
     - Demo applications. 
     - Pacman. Training model.
     - Pacman. Playing!
     - Ideas about usage.
-- [How get started?](#-how-get-started)
-    - [Importing library in a project.](#-how-get-started)
-    - [TensorFlow.js runtime.](#-tensorflowjs-runtime)
-    - [Tensors.](#-tensors)
-    - [Variables.](#-variables)
-    - [Operations.](#-operations)
-    - [Memory management.](#-memory-management)
-- [Hello, TensorFlow.js!](#-hello-tensorflowjs)
-    - [Creating from scratch and training simple model.](#-creating-from-scratch-and-training-simple-model)
-    - [Using pre-trained model.](#-use-pre-trained-model)
-- [Сonclusion](#-conclusion)
+- [How get started?](#how-get-started)
+    - [Importing library in a project.](#how-get-started)
+    - [TensorFlow.js runtime.](#tensorflowjs-runtime)
+    - [Tensors.](#tensors)
+    - [Variables.](#variables)
+    - [Operations.](#operations)
+    - [Memory management.](#memory-management)
+- [Hello, TensorFlow.js!](#hello-tensorflowjs)
+    - [Creating from scratch and training simple model.](#creating-from-scratch-and-training-simple-model)
+    - [Using pre-trained model.](#use-pre-trained-model)
+- [Сonclusion](#conclusion)
 
 ## Introduction
 

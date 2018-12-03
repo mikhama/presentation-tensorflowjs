@@ -31,9 +31,7 @@ Link to task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/
     - [Importing library in a project.](#how-get-started)
     - [TensorFlow.js runtime.](#tensorflowjs-runtime)
     - [Tensors.](#tensors)
-    - [Variables.](#variables)
-    - [Operations.](#operations)
-    - [Memory management.](#memory-management)
+    - [Important things.](#important-things)
 - [Hello, TensorFlow.js!](#hello-tensorflowjs)
     - [Creating from scratch and training simple model.](#creating-from-scratch-and-training-simple-model)
     - [Using pre-trained model.](#use-pre-trained-model)
@@ -51,29 +49,32 @@ Before going to TensorFlow.js, I would like to start off with TensorFlow.
 
 An <a href="https://www.tensorflow.org">official site</a> of Tensor Flow  says: "This is an open source machine learning framework for everyone."
 
-Earlier in 2011, it was developed at Google as their proprietary library for Machine Learning applications at Google. It was called DistBelief.
+Earlier in 2011, it was developed at Google as their proprietary library for Machine Learning applications. It was called DistBelief.
 
 In November 2015 this library was open sourced under the Apache License.
 
 In February 2017 version 1.0 of TensorFlow was released.
 
-It is a low-level C++ library with a lot of functionality for doing Machine Learning. In the world of data science, Python is very popular, and it is a primary language for TensorFlow. But TensorFlow works with many others programming languages, such as Java, C, Swift, Go, and of course JavaScript.
+It is a low-level C++ library with a lot of functionality for doing Machine Learning.
+
+In the world of data science, Python is very popular, and it is a primary language for TensorFlow. But TensorFlow works with many others programming languages, such as Java, C, Swift, Go, and of course JavaScript.
 
 It can run on multiple CPUs and GPUs and is available on 64-bit Linux, macOS, Windows, and mobile computing platforms including Android and iOS.
 
 ## And what about TensorFlow.js?
 
-In JavaScript, Machine Learning was performed by using an API. An API was made using some framework, and the model was deployed at the server. The client sent a request using JavaScript to get results from the server.
+In JavaScript, Machine Learning was performed by using an API. A model was deployed at the server. A client sent a request on a server using JavaScript. Operations with the model were done on the server.
+Then the server sent a response to the client.
 
 In August 2017, a project called Deeplearn.js appeared, which aimed to enable Machine Learning in JavaScript, without the API hassle.
 
-But there were questions about speed. It was very well known that JavaScript code could not run on GPU. To solve this problem, WebGL was introduced. This is a browser interface to OpenGL. WebGL enabled the execution of JavaScript code on GPU.
+But there were questions about speed because JavaScript code couldn't run on GPU. To solve this problem, WebGL was introduced. This is a browser interface to OpenGL. WebGL enabled the execution of JavaScript code on GPU.
 
 And in March 2018, the DeepLearn.js team got merged into the TensorFlow Team at Google and was renamed to TensorFlow.js.
 
 ## Who is using it?
 
-Tensor Flow has been using by many companies such as Google, Airbnb, Intel, AMD, UBER, and many others.
+Tensor Flow has been using by many companies such as Google, Airbnb, Intel and many others.
 
 ## What is TensorFlow.js providing for Front-end Developers?
 
@@ -84,8 +85,8 @@ It entirety works in a browser:
 It runs at laptops and mobile devices that have sensors like the microphone, camera, accelerometer, etc.
 
 With TesnsorFlow.js you can:
-- Build and train models from scratch using the low-level JavaScript linear algebra library or the high-level layers API directly in the browser or under Node.js.
-- Use TensorFlow.js model converters to run existing models (Keras) right in the browser or under Node.js.
+- Build and train models from scratch.
+- Run existing models (TensorFlow or Keras) directly in the browser or under Node.js.
 - Retrain existing models using sensor data connected to the browser, or other client-side data.
 
 ## For what kind of applications I might use TensorFlow.js?
@@ -93,7 +94,7 @@ With TesnsorFlow.js you can:
 Official site of <a href="https://js.tensorflow.org/">TensorFlow.js</a> provides some demo applications available:
 
 - Emoji Scavenger Hunt is a game about finding objects in the real world.
-- Webcam Controller is a game about playing in Pacman.
+- Webcam Controller is a game in Pacman.
 - Teachable Machine lets you teach itself to recognize images and play songs.
 - Performance RNN is a real-time piano performance by a neural network.
 - Posenet is a human pose estimation in the browser.
@@ -102,7 +103,7 @@ And I have made a gif-animation for demonstrating you an example of the amazing 
 
 And now I show you how it easy to play in Packman using only your head.
 
-First of all, I create some pre-trained examples for our model. I turn my head in up direction, then in left, right and down. And finally, I press the button training. Our model is created!
+First of all, I create some pre-trained examples for our model. I turn my head in left direction, then in right, down and up. And finally, I press the button training. Our model is created!
 
 You can see that pictogram with the direction that I turn my head is highlighted orange color when I turn my head.
 
@@ -111,9 +112,9 @@ This is not a joke, I really don't use my hands!
 I think this awesome possibility to use a controller that you want for different objectives.
 
 I think you might use TensorFlow.js for:
-- Accessibility (For example, people with disabilities might use a head for switching pages).
-- Games (Turn your imagination on...).
-- Learning applications (Maybe for dancing learning application).
+- Accessibility (For example, people who can't use hadns might use a head for switching pages).
+- Games.
+- Learning applications.
 - and so on.
 
 ## How get started?
@@ -132,7 +133,7 @@ And write it in your main js file:
 
 ### TensorFlow.js runtime
 
-TensorFlow.js uses WebGL. And it provides two things:
+TensorFlow.js uses WebGL in a browser or computing unit (TPU, CPU, GPU) in Node.js. And it provides two things:
 - CoreAPI is a low-level API for linear algebra and automatic differentiation. It contains tools for creating and training models from scratch.
 - LayersAPI is the primary building block for constructing a Machine Learning model. Under the hood, every layer uses the CoreAPI of TensorFlow.js.
 
@@ -141,8 +142,6 @@ TensorFlow supports models importing (TensorFlow and Keras).
 ### Tensors
 
 So, what is a Tensor?
-
-Tensor is a mathematical thing it's a structure that holds numbers in it.
 
 ```
 Scalar      1                // a scalar is a single number
@@ -157,56 +156,17 @@ Tensor      [ [1 2] [3 4] ]  // a tensor is a n-dimensional array with n > 2
 ```
 
 Tensors are the core data structure of TensorFlow.js.
-For creating a tensor you should use this method `tf.tensor(values, shape?, dtype?)`:
+For creating a tensor you should use method `tf.tensor(values, shape?, dtype?)`:
 
-- **values** *(TypedArray|Array)* The values of the tensor. Can be nested array of numbers, or a flat array, or a TypedArray.
-- **shape** *(number[])* The shape of the tensor. Optional. If not provided, it is inferred from values. Optional.
-- **dtype** *('float32'|'int32'|'bool'|'complex64')* The data type. Optional.
+### Important things
 
-### Variables
+**Variables.** Tensors are immutable data structures. But if you need to change it you should use method `tf.variable()`.
 
-Tensors are immutable data structures. This means their values can't be changed once they are set.
+**Operations.** Operations always return new Tensors and newer modify input Tensors. TensorFLow.js has many operations such as addition, substraction, multipliying, dividing, finding dot product, etc.
 
-But if we need to change the data frequently then you should use `tf.variable()`:
+**Memory Management.** Memory management is the key in the Machine Learning tasks because they are generally computationally expensive. TensorFlow.js provides two major ways to manage memory: `tf.dispose()` and `tf.tidy()`.
 
-```
-const x = tf.variable(tf.tensor([1, 2, 3]));
-x.assign(tf.tensor([4, 5, 6]));
-
-x.print();
-```
-
-### Operations
-
-There are many operations in TensorFlow.js you can find on the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page</a>. Operations always return new Tensors and newer modify input Tensors. But `tf.variable()` can be used in order to save memory.
-
-`tf.add()` — Adds two `tf.Tensors` element-wise:
-
-```
-const a = tf.tensor1d([1, 2, 3, 4]);
-const b = tf.tensor1d([10, 20, 30, 40]);
-
-a.add(b).print();  // or tf.add(a, b)
-// [11, 22, 33, 44]
-```
-
-`tf.matmul()` — Computes the dot product of two matrices, A * B. This operation is frequently used in Machine Learning.
-
-```
-const a = tf.tensor2d([1, 2], [1, 2]);
-const b = tf.tensor2d([1, 2, 3, 4], [2, 2]);
-
-a.matMul(b).print();  // or tf.matMul(a, b)
-```
-
-### Memory Management
-
-Memory management is the key in the Machine Learning tasks because they are generally computationally expensive.
-
-TensorFlow.js provides two major ways to manage memory:
-
-1. `tf.dispose()` - Disposes any `tf.Tensors` found within the provided object.
-2. `tf.tidy()` - Using this method helps avoid memory leaks.
+You can find more on the <a href="https://js.tensorflow.org/api/0.13.3/">documentation page</a>
 
 ## Hello, TensorFlow.js!
 
@@ -230,8 +190,8 @@ const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
 // Train the model using the data.
 model.fit(xs, ys, {epochs: 1000}).then(() => {
-// Use the model to do inference on a data point the model hasn't seen before:
-model.predict(tf.tensor2d([5], [1, 1])).print();
+  // Use the model to do inference on a data point the model hasn't seen before:
+  model.predict(tf.tensor2d([5], [1, 1])).print();
 });
 ```
 With each new iteration, a probability of prediction is increasing, because the model is training. `epochs` is a number of iterations.
@@ -249,12 +209,11 @@ epochs = 1000 shows 8.9420271
 I have created an application for <a href="https://mikhama.github.io/image-recognition/">image recognition</a> in order to show you that TensorFlow.js is not very hard to use on real life Web-Applications.
 
 My application is very simple to use:
-- Wait when a model is loading.
 - Push the button and select an image.
-- And see a result. The result is what kind of the object is on the image.
+- See a result. The result is what kind of the object is on the image.
 - You can see a probability and five possible answers.
 
-You can see the code on my <a href="https://github.com/mikhama/image-recognition">Github</a>.
+You can see the code on my <a href="https://github.com/mikhama/image-recognition">GitHub</a> page.
 
 ```
 8   const model = await tf.loadModel('./model/model.json');
@@ -272,13 +231,10 @@ You can see the code on my <a href="https://github.com/mikhama/image-recognition
 
 I have only 10 lines of code that are related to TensorFlow.js!
 
-I download from the Internet ready for TensorFlow.js pre-trained MobileNet model.
+To create it, I have downloaded from the Internet ready for TensorFlow.js pre-trained MobileNet model.
 
-First of all, I load this pre-trained model.
-
-And then I do some magic with TensorFlow.js.
-
-For good prediction recommended doing pre-processing of images. We need it because images that are used for creating model and images that are used right now are different. They hue/saturation, color and brightness may be different. We have to normalize the image by using a different technics in order to make that particular real-world image into the same type of image what we have trained. That normalizing have been made from 45 to 49 lines.
+I load this pre-trained model in constant. And then I take the image and make some pre-processing.
+I need it because images that are used for creating model and images that are used right now are different. They hue/saturation, color and brightness may be different. I have to normalize the image by using a different technics.
 
 ## Conclusion
 

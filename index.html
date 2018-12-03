@@ -278,67 +278,41 @@
 								<td class="fragment"><img class="image" src="./images/tensor.png" alt="Tensor" height="200"></td>
 							</tr>
 						</table>
+						<div class="fragment">
+							<p><span class="marked-text">tf.tensor</span><span class="shaded-text">(values, shape?, dtype?)</span></p>
+							<pre><code data-trim data-noescape>
+								values (TypedArray|Array)
+								shape (number[])
+								dtype ('float32'|'int32'|'bool'|'complex64')
+							</code></pre>
+						</div>
 						<aside class="notes">
 							<p>So, what is a Tensor?</p>
 							<p>n-dimensional array with n bigger that 2</p>
-						</aside>
-					</section>
-					<section class="slide">
-						<h2 class="slide-heading">Creating a tensor</h2>
-						<p><span class="marked-text">tf.tensor</span><span class="shaded-text">(values, shape?, dtype?)</span></p>
-						<pre><code data-trim data-noescape>
-							values (TypedArray|Array)
-							shape (number[])
-							dtype ('float32'|'int32'|'bool'|'complex64')
-						</code></pre>
-						<aside class="notes">
 							<p>Core data structure!</p>
 						</aside>
 					</section>
 					<section class="slide">
-						<h2 class="slide-heading">Variables</h2>
-						<p><span class="marked-text">tf.variable</span><span class="shaded-text">()</span></p>
-						<pre><code data-trim data-noescape>
-							const x = tf.variable(tf.tensor([1, 2, 3]));
-							x.assign(tf.tensor([4, 5, 6]));
-							
-							x.print();
-						</code></pre>
+						<h2 class="slide-heading">Important Things</h2>
+						<ul>
+							<li>Variables: <span class="marked-text">tf.variable</span><span class="shaded-text">()</span></li>
+							<li>
+								Operations:
+								<span class="marked-text">tf.add</span><span class="shaded-text">()</span>, 
+								<span class="marked-text">tf.sub</span><span class="shaded-text">()</span>, 
+								<span class="marked-text">tf.mul</span><span class="shaded-text">()</span>, 
+								<span class="marked-text">tf.div</span><span class="shaded-text">()</span>,
+								<span class="marked-text">tf.matmul</span><span class="shaded-text">()</span>,
+								and so on...
+							</li>
+							<li>Memory Management: <span class="marked-text">tf.dispose</span><span class="shaded-text">()</span>, <span class="marked-text">tf.tidy</span><span class="shaded-text">()</span> </li>
+						</ul>
+						<p>See more at the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page.</a></p>
 						<aside class="notes">
 							<p>Immutable data structures.</p>
 							<p>If data are changed frequenlty use variables</p>
-						</aside>
-					</section>
-					<section class="slide">
-						<h2 class="slide-heading">Operations</h2>
-						<p><span class="marked-text">tf.add</span><span class="shaded-text">()</span></p>
-						<pre><code data-trim data-noescape>
-							const a = tf.tensor1d([1, 2, 3, 4]);
-							const b = tf.tensor1d([10, 20, 30, 40]);
-							
-							a.add(b).print();  // or tf.add(a, b)
-							// [11, 22, 33, 44]
-						</code></pre>
-						<p><span class="marked-text">tf.matmul</span><span class="shaded-text">()</span></p>
-						<pre><code data-trim data-noescape>
-							const a = tf.tensor2d([1, 2], [1, 2]);
-							const b = tf.tensor2d([1, 2, 3, 4], [2, 2]);
-							
-							a.matMul(b).print();  // or tf.matMul(a, b)
-						</code></pre>
-						<p>More operations on the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page</a></p>
-						<aside class="notes">
 							<p>More operations on the documentation page</p>
 							<p>addition, substraction, multipluying, finding dot product, etc. - are basic operations used for Machine Learning</p>
-						</aside>
-					</section>
-					<section class="slide">
-						<h2 class="slide-heading">Memory Management</h2>
-						<ol>
-							<li><span class="marked-text">tf.dispose</span><span class="shaded-text">()</span> — Disposes any <span class="marked-text">tf.Tensors</span> found within the provided object.</li>
-							<li><span class="marked-text">tf.tidy</span><span class="shaded-text">()</span> — Using this method helps avoid memory leaks.</li>
-						</ol>
-						<aside class="notes">
 							<p>Memory management is a key in the ML tasks...</p>
 						</aside>
 					</section>

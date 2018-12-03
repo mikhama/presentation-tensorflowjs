@@ -27,6 +27,10 @@
   font-weight: 700;
 }
 
+.slide .bigger-top-margin {
+  margin: 2em;
+}
+
 .slide .no-margin {
   margin: 0;
 }

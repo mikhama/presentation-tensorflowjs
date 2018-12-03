@@ -160,6 +160,8 @@ For creating a tensor you should use method `tf.tensor(values, shape?, dtype?)`:
 
 ### Important things
 
+There are very important things that you are should know if you want to study machine learning with TensorFlow.js
+
 **Variables.** Tensors are immutable data structures. But if you need to change it you should use method `tf.variable()`.
 
 **Operations.** Operations always return new Tensors and newer modify input Tensors. TensorFLow.js has many operations such as addition, substraction, multipliying, dividing, finding dot product, etc.

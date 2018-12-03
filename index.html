@@ -31,6 +31,11 @@
 						TensorFlow<span class="logo-part">.js</span>
 					</h1>
 					<h2 class="speaker slide-heading">Speaker: Dzmitry Tsebruk</h2>
+					<aside class="notes">
+						<p>Hello...</p>
+						<p>Recently getting started...</p>
+						<p>Before going to...</p>
+					</aside>
 				</section>
 				<section>
 					<section class="slide question" data-background="rgb(255, 102, 0)">
@@ -41,6 +46,9 @@
 						<blockquote cite="https://www.tensorflow.org/">
 							“This is an open source machine learning framework for everyone”
 						</blockquote>
+						<aside class="notes">
+							<p>But earlier...</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">History timeline</h2>
@@ -59,13 +67,15 @@
 							<span class="year thick-text marked-text">2017</span>
 							<span class="image-description">Version 1.0 of TensorFlow</span>
 						</p>
+						<aside class="notes">
+							<p>2011 This is was Google proprietary library for Machine Learning applications, called DistBelief</p>
+							<p>2015 Apache license</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Languages Support</h2>
 						<p class="fragment marked-text">
 							This is a low-level C++ library
-							<!-- <img class="image image-in-center" src="./images/logo.png" alt="Logo" width="120" height="120"> -->
-							<!-- <span class="image-description thick-text marked-text">Low-level C++ library</span> -->
 						</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">Python</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">Java</p>
@@ -73,6 +83,11 @@
 						<p class="fragment fade-in-then-semi-out smaller-text">Go</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">Swift</p>
 						<p class="fragment fade-in-then-semi-out smaller-text">JavaScript</p>
+						<aside class="notes">
+							<p>library with a lot...</p>
+							<p>In the world of data science, Python is...</p>
+							<p>But TensorFlow works...</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Platforms Support</h2>
@@ -95,6 +110,11 @@
 								</td>
 							</tr>
 						</table>
+						<aside class="notes">
+							<p>It can run on multiple central or graphics processing units...</p>
+							<p>64-bit desktop...</p>
+							<p>and mobile devices including...</p>
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -104,6 +124,9 @@
 					<section class="slide">
 						<h2 class="slide-heading">Client-Server Architecture</h2>
 						<img class="image" src="./images/client-server-architecture.png" alt="Logo">
+						<aside class="notes">
+							<p>... ML was performed by using an API</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<p class="marked-text thick-text smaller-text">August 2017</p>
@@ -116,6 +139,10 @@
 						<p class="fragment fade-in-then-semi-out marked-text thick-text smaller-text">Low speed of computing</p>
 						<p class="fragment fade-in-then-semi-out smaller-text no-margin">⬇</p>
 						<p class="fragment fade-in-then-semi-out grow">WebGL</p>
+						<aside class="notes">
+							<p>... JS code could not run on GPU</p>
+							<p>... WebGL was introduced</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<p class="thick-text marked-text">March 2018</p>
@@ -126,6 +153,9 @@
 							<img class="image image-in-center" src="./images/logo.png" alt="Logo" width="80" height="80">
 							TensorFlow<span class="logo-part">.js</span>
 						</h2>
+						<aside class="notes">
+							<p>In March 2018 ... got merged</p>
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -147,6 +177,9 @@
 						</ul>
 					</section>
 					<section class="slide" data-background="white" data-background-image="images/phone-sensors.png" data-background-size="contain">
+						<aside class="notes">
+							<p>It runs at laptops and mobile devices</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">With TensorFlow.js you can:</h2>
@@ -155,6 +188,11 @@
 							<li>Run existing models right in the browser.</li>
 							<li>Retrain existing models.</li>
 						</ul>
+						<aside class="notes">
+							<p>... using low-level linear algebra library, or high-level layers API</p>
+							<p>Use converters to run models</p>
+							<p>... using sensors</p>
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -170,9 +208,16 @@
 							<li>Perfomarmance RNN</li>
 							<li>Posenet</li>
 						</ul>
+						<aside class="notes">
+							<p>Teachable Machine lets you teach itself to recognize...</p>
+							<p>Perfomarmance RNN - real-time piano performance...</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Let's play in PACMAN!</h2>
+						<aside class="notes">
+							<p>I have made a gif-...</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading marked-text">1. Setup Controller</h2>
@@ -183,6 +228,9 @@
 						<h2 class="slide-heading marked-text">2. Playing</h2>
 					</section>
 					<section class="slide" data-background="black" data-background-image="images/pacman-playing.gif" data-background-size="contain">
+						<aside class="notes">
+							<p>... pictogram... highlighted...</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">You might use TensorFlow.js for:</h2>
@@ -200,9 +248,8 @@
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">In Browser:</h2>
-						<pre><code data-trim data-noescape>
-							&lt;script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"&gt;
-							&lt;/script&gt;
+						<pre><code class="smaller-code" data-trim data-noescape>
+							&lt;script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"&gt;&lt;/script&gt;
 						</code></pre>
 						<h2 class="slide-heading">In Node.js:</h2>
 						<pre><code data-trim data-noescape>
@@ -213,6 +260,13 @@
 						</code></pre>
 					</section>
 					<section class="slide" data-background="white" data-background-image="images/runtime.png" data-background-size="contain">
+						<aside class="notes">
+							<p>... uses WebGl</p>
+							<p>... or compunig units under Node.js</p>
+							<p>CoreAPI = low-lewel API</p>
+							<p>LayersAPI = Primary building block for constuctiong a model</p>
+							<p>Models importing</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Tensors</h2>
@@ -224,6 +278,10 @@
 								<td class="fragment"><img class="image" src="./images/tensor.png" alt="Tensor" height="200"></td>
 							</tr>
 						</table>
+						<aside class="notes">
+							<p>So, what is a Tensor?</p>
+							<p>n-dimensional array with n bigger that 2</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Creating a tensor</h2>
@@ -233,6 +291,9 @@
 							shape (number[])
 							dtype ('float32'|'int32'|'bool'|'complex64')
 						</code></pre>
+						<aside class="notes">
+							<p>Core data structure!</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Variables</h2>
@@ -242,7 +303,11 @@
 							x.assign(tf.tensor([4, 5, 6]));
 							
 							x.print();
-						</code></pre>	
+						</code></pre>
+						<aside class="notes">
+							<p>Immutable data structures.</p>
+							<p>If data are changed frequenlty use variables</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Operations</h2>
@@ -262,6 +327,10 @@
 							a.matMul(b).print();  // or tf.matMul(a, b)
 						</code></pre>
 						<p>More operations on the <a href="https://js.tensorflow.org/api/0.13.3/#Operations">documentation page</a></p>
+						<aside class="notes">
+							<p>More operations on the documentation page</p>
+							<p>addition, substraction, multipluying, finding dot product, etc. - are basic operations used for Machine Learning</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Memory Management</h2>
@@ -269,6 +338,9 @@
 							<li><span class="marked-text">tf.dispose</span><span class="shaded-text">()</span> — Disposes any <span class="marked-text">tf.Tensors</span> found within the provided object.</li>
 							<li><span class="marked-text">tf.tidy</span><span class="shaded-text">()</span> — Using this method helps avoid memory leaks.</li>
 						</ol>
+						<aside class="notes">
+							<p>Memory management is a key in the ML tasks...</p>
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -279,8 +351,16 @@
 						<h2 class="slide-heading">Creating from scratch and training simple model</h2>
 					</section>
 					<section class="slide" data-background="white" data-background-image="images/graph-1.png" data-background-size="contain">
+						<aside class="notes">
+							<p>For example, we have linear regression</p>
+						</aside>
 					</section>
 					<section class="slide" data-background="white" data-background-image="images/graph-2.png" data-background-size="contain">
+						<aside class="notes">
+							<p>And we need predict...</p>
+							<p>We know that Y will be 9, because we have some intellect.</p>
+							<p>Lets teach the machine!</p>
+						</aside>
 					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Code example</h2>
@@ -313,9 +393,11 @@
 						<h2 class="slide-heading">Using pre-trained model</h2>
 						<p><a href="https://mikhama.github.io/image-recognition/" target="_blank">Image Recognition</a> with TensorFlow.js</p>
 					</section>
+					<section class="slide" data-background="white" data-background-image="images/image-recognition.gif" data-background-size="contain">
+					</section>
 					<section class="slide">
 						<h2 class="slide-heading">Code example</h2>
-						<pre><code data-trim data-noescape>
+						<pre><code class="smaller-code" data-trim data-noescape>
 							 8	const model = await tf.loadModel('./model/model.json');
 								...
 							43	const offset = tf.scalar(127.5);

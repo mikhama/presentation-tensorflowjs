@@ -176,7 +176,11 @@ You can find more on the <a href="https://js.tensorflow.org/api/0.13.3/">documen
 
 It is an example from the official site of <a href="https://js.tensorflow.org/">TensorFlow.js</a>.
 
-For example, we have linear regression. And we need to predict Y when X = 5.
+For example, we have linear regression. And we need to predict "y" when "x" equals 5. 
+
+We know that "y" will be 9 because we have some intellect.
+
+Now let's teach the machine!
 
 ```
 // Define a model for linear regression.

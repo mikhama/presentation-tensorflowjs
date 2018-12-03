@@ -236,6 +236,8 @@ model.predict(tf.tensor2d([5], [1, 1])).print();
 ```
 With each new iteration, a probability of prediction is increasing, because the model is training. `epochs` is a number of iterations.
 
+You can see when "epochs" value is increasing, "y" is approximate to value that expected.
+
 ```
 epochs = 10 shows 7.3903484
 epochs = 100 shows 8.130826

@@ -59,7 +59,7 @@ It is a low-level C++ library with a lot of functionality for doing Machine Lear
 
 In the world of data science, Python is very popular, and it is a primary language for TensorFlow. But TensorFlow works with many others programming languages, such as Java, C, Swift, Go, and of course JavaScript.
 
-It can run on multiple CPUs and GPUs and is available on 64-bit Linux, macOS, Windows, and mobile computing platforms including Android and iOS.
+It can run on multiple CPUs and GPUs and is available on 64-bit Windows, macOS, Linux and mobile computing platforms including Android and iOS.
 
 ## And what about TensorFlow.js?
 

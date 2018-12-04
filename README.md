@@ -1,8 +1,9 @@
 # Presentation Draft
 
-## Subject: "TensorFlow.js"
-
 Link to task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/presentation.md
+Link to presentation: https://mikhama.github.io/presentation-tensorflowjs/
+
+## Subject: "TensorFlow.js"
 
 ## Agenda
 
@@ -59,7 +60,7 @@ It is a low-level C++ library with a lot of functionality for doing Machine Lear
 
 In the world of data science, Python is very popular, and it is a primary language for TensorFlow. But TensorFlow works with many others programming languages, such as Java, C, Swift, Go, and of course JavaScript.
 
-It can run on multiple CPUs and GPUs and is available on 64-bit Windows, macOS, Linux and mobile computing platforms including Android and iOS.
+It can run on multiple CPUs and GPUs and is available on 64-bit desktop platforms such as Windows, macOS, Linux and mobile computing platforms including Android and iOS.
 
 ## And what about TensorFlow.js?
 
@@ -104,6 +105,8 @@ And I have made a gif-animation for demonstrating you an example of the amazing 
 And now I show you how it easy to play in Packman using only your head.
 
 First of all, I create some pre-trained examples for our model. I turn my head in left direction, then in right, down and up. And finally, I press the button training. Our model is created!
+
+When the controller is created, we ready to play!
 
 You can see that pictogram with the direction that I turn my head is highlighted orange color when I turn my head.
 
@@ -183,20 +186,20 @@ We know that "y" will be 9 because we have some intellect.
 Now let's teach the machine!
 
 ```
-// Define a model for linear regression.
+// 1st step: Define a model for linear regression
 const model = tf.sequential();
 model.add(tf.layers.dense({units: 1, inputShape: [1]}));
 
-// Prepare the model for training: Specify the loss and the optimizer.
+// 2nd step: Prepare the model for training: Specify the loss and the optimizer
 model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
 
-// Generate some synthetic data for training.
+// 3rd step: Generate some synthetic data for training
 const xs = tf.tensor2d([1, 2, 3, 4], [4, 1]);
 const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
-// Train the model using the data.
+// 4th step: Train the model using the data
 model.fit(xs, ys, {epochs: 1000}).then(() => {
-  // Use the model to do inference on a data point the model hasn't seen before:
+  // 5th step: Use the model
   model.predict(tf.tensor2d([5], [1, 1])).print();
 });
 ```

@@ -6,7 +6,7 @@ Hello everyone. My name is Dzmitry, and I'll tell you about TensorFlow.js.
 
 Recently getting started with Machine Learning was very expensive and time-consuming enjoyment, but today you can start with Machine Learning very easily right in your browser, using JavaScript.
 
-But before going to TensorFlow.js, I would like to start off with TensorFlow.
+But before I'm going to TensorFlow.js, I would like to start off with TensorFlow.
 
 ## What is TensorFlow?
 
@@ -18,7 +18,7 @@ In 2015 it was open sourced under the Apache License.
 
 In 2017 version 1.0 of TensorFlow was released.
 
-It is a low-level C++ library with a lot of functionality for doing Machine Learning.
+This is a low-level C++ library with a lot of functionality for doing Machine Learning.
 
 In the world of data science, Python is very popular language, and it is also a primary language for TensorFlow. But TensorFlow works with many others languages, such as Java, C, Go, Swift, and of course JavaScript.
 
@@ -68,7 +68,7 @@ When our controller is ready, we are ready to play!
 
 And you can see: when I turn my head in some direction the pictogram with that direction highlighted orange color. And this is not a joke, I really don't use my hands!
 
-And I think you might use TensorFlow.js for:
+And I think that you might use TensorFlow.js for:
 - Accessibility (For example, people who can't use hands might use a head in order to switching pages in your Web-application).
 - Or you can use it for games or learning applications.
 - and so on.
@@ -81,9 +81,9 @@ Or you can install it as a Node.js package, and import it in your main js file.
 
 TensorFlow.js uses WebGL in a browser or processing unit (TPU, CPU, GPU) in Node.js. And it provides two things:
 - CoreAPI is a low-level API for linear algebra and automatic differentiation. It contains tools for creating and training models from scratch.
-- LayersAPI is the primary building block for constructing a Machine Learning model. Under the hood, every layer uses the CoreAPI.
+- LayersAPI is the primary building block for constructing a Machine Learning models. Under the hood, every layer uses the CoreAPI.
 
-TensorFlow.js supports models importing. You can import models such as Keras models or TensorFlow models into your project.
+TensorFlow.js supports model importing. You can import models such as Keras models or TensorFlow models into your project.
 
 So, what is a Tensor?
 
@@ -97,7 +97,7 @@ Tensors are immutable data structures. But you can use method `variable` in orde
 
 Operations never modify input Tensors and always return new Tensors. TensorFLow.js provides many operations such as addition, substraction, multipliying, dividing, finding dot product, and so on.
 
-Memory management is the key in the Machine Learning tasks because they are generally computationally expensive. For memory management you can use methods: `dispose` and `tidy`.
+Memory management is the key to the Machine Learning tasks because they are generally computationally expensive. For memory management you can use methods: `dispose` and `tidy`.
 
 You can see more on the documentation page.
 
@@ -118,7 +118,7 @@ And we need to predict "y" when "x" equals 5. We know that "y" will be 9 because
 Our model is training with each iteration. `epochs` is a number of these iterations. 
  You can see when "epochs" value is increasing, our "y" value is approximate to value that expected.
 
-### Use pre-trained model.
+### Using pre-trained model.
 
 I have created a simple application in order to show you that using TensoFlow for real-life applications is not very hard to use.
 
@@ -128,7 +128,7 @@ There is my code example.
 
 First of all a downloaded from the Internet MobileNet model, and I loaded it into my script.
 
-And then need some pre-processing of the image. I need pre-processing, because images that was using for creating the model and images that I use right now are different. They color, brightness hue/saturation maybe different, and I use different technics in order to normalize that.
+And then need some pre-processing of the image. I need pre-processing, because images that were using for creating the model and images that I use right now are different. Their color, brightness hue/saturation maybe different, and I use different technics in order to normalize that.
 
 You can see the whole on my GitHub page.
 

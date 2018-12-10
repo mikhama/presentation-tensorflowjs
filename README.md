@@ -4,8 +4,6 @@ Task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/presenta
 
 Presentation: https://mikhama.github.io/presentation-tensorflowjs/
 
-Video: https://www.youtube.com/watch?v=yNkPiCZOYUw
-
 Transcript: https://github.com/mikhama/presentation-tensorflowjs/blob/master/transcript.md
 
 ## Subject: "TensorFlow.js"
